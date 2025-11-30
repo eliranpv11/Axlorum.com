@@ -1,0 +1,433 @@
+/* =====================================================
+   AXLORUM TECHNOLOGIES — Privacy Policy Page
+   =====================================================
+   Glassmorphism + Professional Legal Layout
+   ===================================================== */
+
+/* === RESET & BASE === */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #05080f;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  color: #fff;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* === MATRIX BACKGROUND === */
+.matrix-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: -1;
+  background: #05080f;
+}
+
+canvas#spaceMatrix {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* === RTL SUPPORT === */
+html[dir="rtl"] body {
+  direction: rtl;
+  text-align: right;
+}
+
+/* === GLASSMORPHISM NAVIGATION === */
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: rgba(5, 8, 15, 0.4);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border-bottom: 1px solid rgba(0, 186, 255, 0.15);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+  transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+.nav.hidden {
+  transform: translateY(-100%);
+  opacity: 0;
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  text-decoration: none;
+}
+
+.nav-logo {
+  width: 40px;
+  height: 40px;
+}
+
+.brand-name {
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  background: linear-gradient(135deg, #fff 0%, #00baff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.nav-link {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  padding: 0.5rem 1.25rem;
+  border-radius: 8px;
+  background: rgba(0, 186, 255, 0.1);
+  border: 1px solid rgba(0, 186, 255, 0.2);
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.nav-link:hover {
+  background: rgba(0, 186, 255, 0.2);
+  border-color: rgba(0, 186, 255, 0.4);
+  color: #fff;
+  box-shadow: 0 0 20px rgba(0, 186, 255, 0.3);
+}
+
+/* === PRIVACY CONTENT === */
+.privacy-page {
+  min-height: 100vh;
+  padding: 8rem 2rem 4rem;
+}
+
+.privacy-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Glass Card for Content */
+.privacy-card {
+  background: rgba(5, 8, 15, 0.5);
+  backdrop-filter: blur(20px) saturate(150%);
+  -webkit-backdrop-filter: blur(20px) saturate(150%);
+  border: 1px solid rgba(0, 186, 255, 0.15);
+  border-radius: 24px;
+  padding: 3rem;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+}
+
+/* Header */
+.privacy-header {
+  text-align: center;
+  margin-bottom: 3rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid rgba(0, 186, 255, 0.1);
+}
+
+.privacy-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 1rem;
+  text-shadow: 0 0 30px rgba(0, 186, 255, 0.3);
+}
+
+.privacy-subtitle {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.privacy-date {
+  display: inline-block;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: #00baff;
+  padding: 0.5rem 1rem;
+  background: rgba(0, 186, 255, 0.1);
+  border-radius: 20px;
+  border: 1px solid rgba(0, 186, 255, 0.2);
+}
+
+/* Intro */
+.privacy-intro {
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 2.5rem;
+  padding: 1.5rem;
+  background: rgba(0, 186, 255, 0.05);
+  border-radius: 12px;
+  border-right: 3px solid #00baff;
+}
+
+/* Sections */
+.privacy-section {
+  margin-bottom: 2.5rem;
+}
+
+.section-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.section-number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #00baff;
+  background: rgba(0, 186, 255, 0.15);
+  border: 1px solid rgba(0, 186, 255, 0.3);
+  border-radius: 10px;
+}
+
+.section-content {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+.section-content p {
+  margin-bottom: 1rem;
+}
+
+/* Subsections */
+.subsection {
+  margin: 1.5rem 0;
+}
+
+.subsection-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 0.75rem;
+}
+
+/* Lists */
+.privacy-list {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0;
+}
+
+.privacy-list li {
+  position: relative;
+  padding-right: 1.5rem;
+  margin-bottom: 0.75rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.privacy-list li::before {
+  content: '●';
+  position: absolute;
+  right: 0;
+  color: #00baff;
+  font-size: 0.6rem;
+  top: 0.5rem;
+}
+
+html[dir="ltr"] .privacy-list li {
+  padding-right: 0;
+  padding-left: 1.5rem;
+}
+
+html[dir="ltr"] .privacy-list li::before {
+  right: auto;
+  left: 0;
+}
+
+/* Warning Box */
+.warning-box {
+  background: rgba(255, 186, 0, 0.1);
+  border: 1px solid rgba(255, 186, 0, 0.3);
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+}
+
+.warning-box p {
+  color: rgba(255, 255, 255, 0.8);
+  margin: 0;
+}
+
+/* Important Note */
+.important-note {
+  background: rgba(0, 186, 255, 0.1);
+  border: 1px solid rgba(0, 186, 255, 0.3);
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* Contact Section */
+.contact-box {
+  background: rgba(0, 186, 255, 0.1);
+  border: 1px solid rgba(0, 186, 255, 0.2);
+  border-radius: 12px;
+  padding: 2rem;
+  text-align: center;
+}
+
+.contact-box p {
+  margin-bottom: 1rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.contact-email {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #00baff;
+  text-decoration: none;
+  padding: 0.75rem 1.5rem;
+  background: rgba(0, 186, 255, 0.15);
+  border: 1px solid rgba(0, 186, 255, 0.3);
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.contact-email:hover {
+  background: rgba(0, 186, 255, 0.25);
+  box-shadow: 0 0 20px rgba(0, 186, 255, 0.3);
+}
+
+/* === FOOTER === */
+.footer {
+  padding: 3rem 2rem;
+  background: rgba(5, 8, 15, 0.6);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-top: 1px solid rgba(0, 186, 255, 0.1);
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  text-align: center;
+}
+
+.footer-brand {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+}
+
+.footer-brand .brand-name {
+  font-size: 1rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #fff 0%, #00baff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.footer-brand .brand-suffix {
+  font-size: 0.85rem;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.footer-copyright {
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
+  .privacy-page {
+    padding: 6rem 1rem 3rem;
+  }
+
+  .privacy-card {
+    padding: 2rem 1.5rem;
+    border-radius: 16px;
+  }
+
+  .privacy-title {
+    font-size: 1.75rem;
+  }
+
+  .section-title {
+    font-size: 1.25rem;
+  }
+
+  .nav-container {
+    padding: 0.875rem 1.25rem;
+  }
+
+  .nav-logo {
+    width: 32px;
+    height: 32px;
+  }
+
+  .brand-name {
+    font-size: 1.25rem;
+  }
+}
+
+/* === RTL ADJUSTMENTS === */
+html[dir="rtl"] .privacy-intro {
+  border-right: 3px solid #00baff;
+  border-left: none;
+}
+
+html[dir="rtl"] .nav-brand {
+  flex-direction: row-reverse;
+}
+
+html[dir="rtl"] .footer-brand {
+  flex-direction: row-reverse;
+}
+
+html[dir="rtl"] .section-title {
+  flex-direction: row-reverse;
+}

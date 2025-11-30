@@ -1,6 +1,6 @@
 /**
- * Axlorum Technologies — Landing Page
- * Enterprise-grade landing page logic
+ * Axlorum Technologies — Privacy Policy Page
+ * Matrix animation + Navigation logic
  */
 
 // === MATRIX ANIMATION ===
@@ -61,10 +61,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const currentScrollY = window.scrollY;
 
     if (currentScrollY > lastScrollY && currentScrollY > 100) {
-      // Scrolling down & past 100px
       nav.classList.add('hidden');
     } else {
-      // Scrolling up
       nav.classList.remove('hidden');
     }
 
@@ -79,16 +77,5 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  // === CTA BUTTON HANDLER ===
-  const handleSignup = () => {
-    window.location.href = "https://axlorum.ai/signup.html";
-  };
-
-  // Bind CTA button
-  const ctaPrimary = document.getElementById("cta-primary");
-  if (ctaPrimary) {
-    ctaPrimary.addEventListener("click", handleSignup);
-  }
-
-  console.log("Axlorum landing initialized");
+  console.log("Axlorum Privacy Policy initialized");
 });
