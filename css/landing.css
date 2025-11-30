@@ -90,8 +90,6 @@ html[dir="rtl"] body {
 .nav-logo {
   width: 40px;
   height: 40px;
-  border-radius: 10px;
-  box-shadow: 0 0 20px rgba(0, 186, 255, 0.3);
 }
 
 .brand-name {
