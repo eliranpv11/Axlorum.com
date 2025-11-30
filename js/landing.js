@@ -52,6 +52,33 @@ draw();
 // === MAIN APP LOGIC ===
 document.addEventListener("DOMContentLoaded", () => {
 
+  // === NAVBAR HIDE ON SCROLL ===
+  const nav = document.querySelector('.nav');
+  let lastScrollY = window.scrollY;
+  let ticking = false;
+
+  const handleScroll = () => {
+    const currentScrollY = window.scrollY;
+
+    if (currentScrollY > lastScrollY && currentScrollY > 100) {
+      // Scrolling down & past 100px
+      nav.classList.add('hidden');
+    } else {
+      // Scrolling up
+      nav.classList.remove('hidden');
+    }
+
+    lastScrollY = currentScrollY;
+    ticking = false;
+  };
+
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      requestAnimationFrame(handleScroll);
+      ticking = true;
+    }
+  });
+
   // === CTA BUTTON HANDLER ===
   const handleSignup = () => {
     const token = localStorage.getItem("token");

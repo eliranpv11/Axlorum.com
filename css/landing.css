@@ -64,6 +64,12 @@ html[dir="rtl"] body {
   -webkit-backdrop-filter: blur(20px) saturate(180%);
   border-bottom: 1px solid rgba(0, 186, 255, 0.15);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+  transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+.nav.hidden {
+  transform: translateY(-100%);
+  opacity: 0;
 }
 
 .nav-container {
