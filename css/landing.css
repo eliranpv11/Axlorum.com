@@ -115,8 +115,8 @@ html[dir="rtl"] body {
   justify-content: center;
   padding: 8rem 2rem 6rem;
   background:
-    radial-gradient(ellipse 80% 50% at 50% -20%, rgba(56, 189, 248, 0.15), transparent),
-    linear-gradient(180deg, #0a0f1a 0%, #0d1424 100%);
+    radial-gradient(ellipse 80% 50% at 50% -20%, rgba(56, 189, 248, 0.12), rgba(0,0,0,0) 70%),
+    linear-gradient(180deg, rgba(10,15,26,0.55) 0%, rgba(13,20,36,0.55) 100%);
   position: relative;
   overflow: hidden;
 }
