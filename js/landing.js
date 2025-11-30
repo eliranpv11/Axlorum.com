@@ -81,12 +81,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // === CTA BUTTON HANDLER ===
   const handleSignup = () => {
-    const token = localStorage.getItem("token");
-    if (token) {
-      window.location.href = "https://axlorum.ai/";
-    } else {
-      window.location.href = "signup.html";
-    }
+    window.location.href = "https://axlorum.ai/signup.html";
   };
 
   // Bind CTA button
